@@ -24,6 +24,7 @@
        var url = "https://api.whatsapp.com/send?phone=+918297208033&"
        var finalUrl = `${url}text=Name:${name}Compnay:${Company}FOD_Location:${FOD_Location}FOD_Type:${FOD_Type}Source:${Source}Mitigation_Required:${Mitigation_Required}`
        window.open(finalUrl);
+       document.getElementById("myForm").reset();
         return false
     }
 </script>
