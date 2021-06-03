@@ -1,16 +1,107 @@
 <!DOCTYPE html>
 <html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+
 <head>
-<title>FOD Reporting</title>
+    <title>FOD Reporting</title>
 </head>
+<link rel="stylesheet" href="styles.css">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+
+<script>
+    function myFunction(e) {
+       const name = document.getElementById("Name").value;
+       const   Company = document.getElementById("Company").value;
+       const   FOD_Location = document.getElementById("FOD_Location").value;
+       const   FOD_Type = document.getElementById("FOD_Type").value;
+       const Source = document.getElementById("Source").value;
+       const Mitigation_Required = document.getElementById("Mitigation_Required").value
+       console.log("called submit" ,name , Company , FOD_Location , FOD_Type )
+       var url = "https://api.whatsapp.com/send?phone=+918297208033&"
+       var finalUrl = `${url}text=Name:${name}Compnay:${Company}FOD_Location:${FOD_Location}FOD_Type:${FOD_Type}Source:${Source}Mitigation_Required:${Mitigation_Required}`
+       window.open(finalUrl);
+        return false
+    }
+</script>
+
 <body>
+    <div class="container-fluid basic-css">
+        <h1>FOD Report</h1>
+        <form class="myForm" id ='myForm'  method="POST" enctype="multipart/form-data" onsubmit="return myFunction(event)">
+         
+            <div class="row justify-content-md-center">
 
-<h1>FOD Report</h1>
-<span>Name</span><input />
-<span>Type</span><input />
-<span>Hazarda</span><input />
+                <div class="col-md-auto">
+                    <label>Name
+                        <input class="form-control" type="text" placeholder="Name"
+                        name="Name" id="Name"
+                         aria-label="default input example">
+                    </label>
+                </div>
+            </div>
+            <div class="row justify-content-md-center">
 
- <a href="https://api.whatsapp.com/send?phone=+918297208033&text=Hello%2C%20World!" ><button onclick="">submit</button> </a>
+                <div class="col-md-auto">
+                    <label>Company
+                        <input class="form-control" type="text" name="Company" placeholder="Company"
+                        id="Company"  aria-label="default input example">
+                    </label>
+                </div>
+            </div>
+            <div class="row justify-content-md-center">
+
+                <div class="col-md-auto">
+                    <label>FOD Location
+
+                        <input class="form-control" type="text" name="FOD_Location" placeholder="FOD Location"
+                          id="FOD_Location"  aria-label="default input example">
+                    </label>
+                </div>
+            </div>
+            <div class="row justify-content-md-center">
+
+                <div class="col-md-auto">
+                    <label>FOD Type
+
+                        <input class="form-control" type="text" name="FOD_Type" placeholder="FOD Type"
+                           id="FOD_Type" aria-label="default input example">
+                    </label>
+                </div>
+            </div>
+            <div class="row justify-content-md-center">
+
+                <div class="col-md-auto">
+                    <label>Source
+
+                        <input class="form-control"  type="text" name="Source" placeholder="Source"
+                          id="Source"  aria-label="default input example">
+                    </label>
+                </div>
+            </div>
+            <div class="row justify-content-md-center">
+
+                <div class="col-md-auto">
+                    <label>Mitigation Required
+                        <input class="form-control"  type="text" name="Mitigation_Required" placeholder="Mitigation Required"
+                          id="Mitigation_Required"  aria-label="default input example">
+                    </label>
+                </div>
+            </div>
+            <div class="row justify-content-md-center">
+                <button style="width: 159px;">submit</button>
+
+            </div>
+        </form>
+
+    </div>
 
 </body>
+
 </html>
+
+<!-- method="get" enctype="application/x-www-form-urlencoded"
+action="https://api.whatsapp.com/send?phone=+918297208033&text=Hello%2C%20World!" -->

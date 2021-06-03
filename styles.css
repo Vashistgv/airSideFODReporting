@@ -1,0 +1,59 @@
+
+
+h1{
+    font-family: serif;
+}
+
+.myForm {
+    font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+    font-size: 20px;
+    width: 90vw;
+    padding: 1em;
+    border: 1px solid #ccc;
+    min-height: 75Vh;
+    }
+    
+    .myForm * {
+    box-sizing: border-box;
+    }
+    
+    .myForm fieldset {
+    border: none;
+    padding: 0;
+    }
+
+
+.basic-css{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.myForm button {
+    padding: 1em;
+    border-radius: 0.5em;
+    background: #eee;
+    border: none;
+    font-weight: bold;
+    margin-top: 1em;
+}
+
+.myForm button:hover {
+    background: #ccc;
+    cursor: pointer;
+}
+
+.myForm input[type="text"],
+.myForm input[type="tel"],
+.myForm input[type="email"],
+.myForm input[type="datetime-local"],
+.myForm select,
+.myForm textarea {
+display: block;
+width: 100%;
+border: 1px solid #ccc;
+font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+font-size: 0.9em;
+padding: 0.3em;
+}
